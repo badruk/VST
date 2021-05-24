@@ -1,0 +1,3 @@
+# checks if wmctrl -a firefox is successful, if not runs firefox
+
+bash -c "wmctrl -a firefox ; [ "$?" == "1" ] && firefox"
