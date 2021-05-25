@@ -1,2 +1,4 @@
-# VST
-repository for VariousSmallTasks (VST) I'm working on
+# Badruk - VST
+
+## Description
+Repository for VariousSmallTasks (VST) I'm working on
