@@ -1,0 +1,16 @@
+# Cuts video input in desired times and removes audio track (-an)
+# outputs to output
+
+ffmpeg -ss 00:00:xx -i input -to 00:00:yy -c copy -an output
+
+# cuts audio from time 0:t for dt with fade (0:0 0 0:1)
+sox audio1.mp3 audio1_trim.mp3 trim 0:t dt fade h 0:0 0 0:1
+
+# samples audio at 44.1 KHz in audio_sample
+ffmpeg -i audio -ar 44100 audio_sample
+
+# concats audio1 and audio2 to audio_c
+sox audio1 audio2 audio_c
+
+# merges video and audio into video file meme
+ffmpeg -i video.mp4 -i audio.mp3 -c copy meme.mp4
